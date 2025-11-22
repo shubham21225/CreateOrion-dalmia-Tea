@@ -3,117 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | Daalmia Tea</title>
+    <title>The Collection | Daalmia Tea</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation (Same as Index) -->
-      <nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <!-- Logo -->
-        <a href="index.html" class="logo">Daalmia.</a>
+    <!-- Announcement Bar -->
+    <div class="anno-bar">Free Shipping on Orders Above ₹499 | 🌿 100% Organic</div>
 
-        <!-- Desktop Menu -->
-        <div class="nav-links" id="navLinks">
-            <a href="index.html" class="nav-item">Home</a>
-            <a href="shop.html" class="nav-item">Shop</a>
-            <a href="#origin" class="nav-item">Our Story</a>
-            <a href="contact.html" class="nav-item">Contact</a>
-            <!-- Mobile Only Cart Link -->
-            <a href="checkout.html" class="nav-item mobile-only" style="display:none;">Cart</a> 
-        </div>
-
-        <!-- Icons & Mobile Toggle -->
-        <div style="display: flex; align-items: center; gap: 20px;">
-            <a href="checkout.html" class="cart-btn">
-                <i class="fas fa-shopping-bag"></i>
-                <span class="cart-count">0</span>
-            </a>
-            <div class="mobile-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Daalmia.</a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="shop.html" class="nav-item">Shop</a>
+                <a href="index.html#origin" class="nav-item">Our Story</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+                <a href="checkout.html" class="nav-item mobile-only" style="display:none;">Cart</a> 
+            </div>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="checkout.html" class="cart-btn"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                <div class="mobile-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-            <div class="breadcrumb"><a href="index.html">Home</a> / Shop</div>
-            <h1>Our Collection</h1>
-            <p>Experience the finest blends from Assam & Dooars.</p>
+    <!-- Shop Hero Section -->
+    <header class="shop-hero">
+        <div class="container text-center">
+            <span class="pill-tag" style="background: rgba(255,255,255,0.8);">Est. 2024</span>
+            <h1>The Collection</h1>
+            <p>Small batch teas, handpicked from the mist-covered hills. <br>Curated for the modern connoisseur.</p>
         </div>
     </header>
 
-    <!-- Shop Grid -->
-    <section class="container">
+    <!-- Filter & Sort Bar -->
+    <div class="shop-toolbar">
+        <div class="container toolbar-inner">
+            <span class="result-count">Showing 3 results</span>
+            <div class="filter-group">
+                <select class="custom-select">
+                    <option>Sort by: Popularity</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Newest First</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <section class="container" style="padding-bottom: 80px;">
         <div class="shop-grid">
             
-            <!-- Product 1 (Main) -->
+            <!-- Product 1 (Active) -->
             <div class="product-card">
                 <div class="product-thumb">
-                    <span class="badge-new">Best Seller</span>
+                    <span class="badge-new">Bestseller</span>
                     <a href="product.html">
-                        <img src="https://placehold.co/300x300/transparent/3A5F40?text=Strong+CTC+Pack" alt="Daalmia Strong CTC">
+                        <img src="https://qph.cf2.quoracdn.net/main-qimg-1039411d82331b5aa63a03023b7325eb-lq" alt="Daalmia Strong CTC">
                     </a>
+                    <div class="thumb-overlay">
+                        <button class="btn-quick-add">Quick Add</button>
+                    </div>
                 </div>
                 <div class="product-info">
+                    <div class="rating-stars">★★★★★</div>
                     <h3 class="product-title"><a href="product.html">Daalmia Strong CTC</a></h3>
-                    <p style="color: #888; font-size: 0.9rem;">Strong & Malty</p>
-                    <div class="price" style="font-size: 1.2rem; margin: 10px 0;">₹50.00</div>
-                    <a href="checkout.html" class="btn-primary" style="padding: 8px 20px; font-size: 0.8rem;">Add to Cart</a>
+                    <p class="product-desc">Bold, malty, and authentic.</p>
+                    <div class="price">₹50.00</div>
                 </div>
             </div>
 
             <!-- Product 2 (Coming Soon) -->
-            <div class="product-card" style="opacity: 0.7;">
+            <div class="product-card coming-soon">
                 <div class="product-thumb">
-                    <span class="badge-new" style="background: #ccc;">Coming Soon</span>
-                    <img src="https://placehold.co/300x300/transparent/ccc?text=Masala+Chai" alt="Masala Chai">
+                    <span class="badge-new" style="background:#888;">Coming Soon</span>
+                    <img src="https://placehold.co/400x400/transparent/ccc?text=Masala+Blend" alt="Masala Chai">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Premium Masala Chai</h3>
-                    <p style="color: #888; font-size: 0.9rem;">Spiced Blend</p>
-                    <div class="price" style="font-size: 1.2rem; margin: 10px 0;">--</div>
-                    <button class="btn-secondary" disabled style="padding: 8px 20px; font-size: 0.8rem; cursor: not-allowed;">Out of Stock</button>
+                    <h3 class="product-title">Royal Masala Blend</h3>
+                    <p class="product-desc">Cardamom & Ginger infusion.</p>
+                    <div class="price">--</div>
                 </div>
             </div>
 
-             <!-- Product 3 (Coming Soon) -->
-             <div class="product-card" style="opacity: 0.7;">
+            <!-- Product 3 (Coming Soon) -->
+            <div class="product-card coming-soon">
                 <div class="product-thumb">
-                    <span class="badge-new" style="background: #ccc;">Coming Soon</span>
-                    <img src="https://placehold.co/300x300/transparent/ccc?text=Green+Tea" alt="Green Tea">
+                    <span class="badge-new" style="background:#888;">Coming Soon</span>
+                    <img src="https://placehold.co/400x400/transparent/ccc?text=Green+Tea" alt="Green Tea">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Himalayan Green Tea</h3>
-                    <p style="color: #888; font-size: 0.9rem;">Pure Leaves</p>
-                    <div class="price" style="font-size: 1.2rem; margin: 10px 0;">--</div>
-                    <button class="btn-secondary" disabled style="padding: 8px 20px; font-size: 0.8rem; cursor: not-allowed;">Out of Stock</button>
+                    <h3 class="product-title">Himalayan Green</h3>
+                    <p class="product-desc">Whole leaf, light brew.</p>
+                    <div class="price">--</div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Footer (Same as Index) -->
-    <footer class="footer-earth">
+    <!-- Promotional Section (The Ritual) -->
+    <section class="shop-promo">
         <div class="container">
-            <p class="copyright">© 2025 Daalmia Tea.</p>
+            <div class="promo-box">
+                <div class="promo-text">
+                    <h2>Never Run Out of Freshness</h2>
+                    <p>Join our <strong>Tea Club</strong>. Get your favorite blend delivered to your door every month with 10% off.</p>
+                    <a href="#" class="btn-primary">View Subscription Plans</a>
+                </div>
+                <div class="promo-img">
+                     <!-- Using a placeholder, replace with a nice lifestyle shot of a tea jar -->
+                    <img src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?q=80&w=600&auto=format&fit=crop" alt="Tea Subscription">
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container" style="max-width: 800px;">
+            <div class="section-title text-center">
+                <h2>Common Questions</h2>
+                <div class="divider-leaf">🍃</div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Where is your tea sourced from? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Our teas are handpicked directly from selected estates in Assam and the Dooars region, ensuring the authentic 'garden fresh' taste.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is the tea 100% natural? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Yes! We use zero artificial flavors, colors, or preservatives. What you get is pure, unadulterated Camellia Sinensis.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How long does shipping take? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>We typically dispatch within 24 hours. Delivery takes 3-5 business days depending on your location in India.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer-wave">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,0 C240,60 480,60 720,30 C960,0 1200,0 1440,30 V60 H0 V0 Z" fill="#1A2F1D"></path></svg>
+    </div>
+    <footer class="footer-earth">
+        <div class="footer-newsletter">
+            <h3>Join the Tea Club</h3>
+            <p>Subscribe for 10% off your first order.</p>
+            <form class="newsletter-form"><input type="email" placeholder="Email address" required><button type="submit">Subscribe</button></form>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo" style="color:#fff; font-size:2rem;">Daalmia.</a>
+                <p>Crafting the perfect cup since 2024.</p>
+            </div>
+            <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li></ul></div>
+            <div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Contact Us</a></li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><p>hello@daalmiatea.com</p></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 Daalmia Tea Pvt Ltd.</p></div>
     </footer>
 
-
+    <!-- Scripts -->
     <script>
-    // Mobile Menu Toggle Script
-    function toggleMenu() {
-        const nav = document.getElementById('navMenu');
-        nav.classList.toggle('active');
-    }
-</script>
+        // Mobile Menu
+        function toggleMenu() { document.getElementById('navLinks').classList.toggle('mobile-active'); }
+        
+        // Sticky Nav
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if(window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
 
+        // FAQ Toggle
+        const faqs = document.querySelectorAll('.faq-question');
+        faqs.forEach(faq => {
+            faq.addEventListener('click', () => {
+                faq.classList.toggle('active');
+                const answer = faq.nextElementSibling;
+                if (faq.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong CTC Tea (50g) | Daalmia Tea</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Announcement & Nav (Same as previous) -->
+    <div class="anno-bar">Free Shipping on Orders Above ₹499 | 🌿 100% Organic</div>
+    
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Daalmia.</a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="shop.html" class="nav-item">Shop</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+                <a href="checkout.html" class="nav-item mobile-only" style="display:none;">Cart</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <a href="checkout.html" class="cart-btn"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                <div class="mobile-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Product Section -->
+    <section class="product-wrapper">
+        <div class="container product-grid">
+            
+            <!-- LEFT: Sticky Gallery -->
+            <div class="product-gallery">
+                <div class="gallery-sticky">
+                    <!-- Main Image -->
+                    <div class="main-image">
+                        <img id="mainImg" src="https://placehold.co/600x700/transparent/3A5F40?text=Daalmia+Packet" alt="Daalmia Tea Packet">
+                    </div>
+                    <!-- Thumbnails -->
+                    <div class="thumbnails">
+                        <div class="thumb active" onclick="changeImage(this, 'https://placehold.co/600x700/transparent/3A5F40?text=Daalmia+Packet')">
+                            <img src="https://placehold.co/100x100/transparent/3A5F40?text=Pack" alt="Pack">
+                        </div>
+                        <div class="thumb" onclick="changeImage(this, 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?q=80&w=600')">
+                            <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?q=80&w=100" alt="Cup">
+                        </div>
+                        <div class="thumb" onclick="changeImage(this, 'https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?q=80&w=600')">
+                            <img src="https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?q=80&w=100" alt="Leaves">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Product Details -->
+            <div class="product-info-col">
+                <div class="breadcrumb"><a href="shop.html">Shop</a> / CTC Tea</div>
+                
+                <h1 class="p-title">Daalmia Strong CTC</h1>
+                <div class="p-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span>(24 Reviews)</span>
+                </div>
+                
+                <div class="p-price">₹50.00 <span class="p-weight">/ 50g</span></div>
+
+                <div class="p-description">
+                    <p><strong>The Morning Kick you deserve.</strong> <br>
+                    Sourced from the finest estates of Assam and Dooars. This blend is crafted for those who love their tea strong, malty, and full of character. It blooms into a rich amber color instantly.</p>
+                </div>
+
+                <!-- Add to Cart Form -->
+                <form action="checkout.html" class="add-to-cart-form">
+                    <div class="qty-selector">
+                        <button type="button" onclick="adjustQty(-1)">-</button>
+                        <input type="number" id="qty" value="1" min="1" readonly>
+                        <button type="button" onclick="adjustQty(1)">+</button>
+                    </div>
+                    <button type="submit" class="btn-primary btn-add">Add to Cart - ₹50</button>
+                </form>
+
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="badge-item"><i class="fas fa-leaf"></i> 100% Natural</div>
+                    <div class="badge-item"><i class="fas fa-truck"></i> Fast Shipping</div>
+                    <div class="badge-item"><i class="fas fa-shield-alt"></i> ISO Certified</div>
+                </div>
+
+                <!-- Accordions for Details -->
+                <div class="p-accordion">
+                    <div class="acc-item">
+                        <button class="acc-header">Ingredients & Origin <i class="fas fa-plus"></i></button>
+                        <div class="acc-body"><p>100% Pure Black CTC Tea. Origin: Assam & Dooars, India. No added preservatives.</p></div>
+                    </div>
+                    <div class="acc-item">
+                        <button class="acc-header">Shipping & Returns <i class="fas fa-plus"></i></button>
+                        <div class="acc-body"><p>Dispatched within 24 hours. Free returns within 7 days if the pack is unopened.</p></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sensory Profile Section -->
+    <section class="sensory-section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Flavor Profile</h2>
+                <div class="divider-leaf">🍃</div>
+            </div>
+            <div class="sensory-grid">
+                <div class="sense-card">
+                    <div class="sense-circle color-circle"></div>
+                    <h3>Color</h3>
+                    <p>Deep Amber</p>
+                </div>
+                <div class="sense-card">
+                    <div class="sense-circle aroma-circle"><i class="fas fa-wind"></i></div>
+                    <h3>Aroma</h3>
+                    <p>Malty & Earthy</p>
+                </div>
+                <div class="sense-card">
+                    <div class="sense-circle taste-circle"><i class="fas fa-mug-hot"></i></div>
+                    <h3>Taste</h3>
+                    <p>Strong & Bold</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brewing Guide -->
+    <section class="brewing-guide">
+        <div class="container">
+            <div class="brew-box">
+                <div class="brew-text">
+                    <h2>The Perfect Brew</h2>
+                    <p>To extract the full strength, we recommend the boiling method.</p>
+                    <ul class="brew-steps">
+                        <li><span>1</span> Boil 1 cup of water + 0.5 cup milk.</li>
+                        <li><span>2</span> Add 1 tsp Daalmia Tea & Sugar.</li>
+                        <li><span>3</span> Simmer for 3 minutes till golden.</li>
+                        <li><span>4</span> Strain and enjoy with biscuits.</li>
+                    </ul>
+                </div>
+                <div class="brew-image">
+                    <img src="https://d27pcll2dx97vv.cloudfront.net/info/wp-content/uploads/2018/03/ginger_black_tea_pc1.jpg" alt="Boiling Tea">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="container" style="padding: 80px 0;">
+        <h3>You Might Also Like</h3>
+        <div class="shop-grid" style="margin-top: 30px;">
+            <div class="product-card coming-soon">
+                <div class="product-thumb">
+                    <span class="badge-new" style="background:#888;">Soon</span>
+                    <img src="https://placehold.co/300x300/transparent/ccc?text=Masala+Chai">
+                </div>
+                <div class="product-info"><h3>Masala Chai</h3><div class="price">--</div></div>
+            </div>
+            <div class="product-card coming-soon">
+                <div class="product-thumb">
+                    <span class="badge-new" style="background:#888;">Soon</span>
+                    <img src="https://placehold.co/300x300/transparent/ccc?text=Green+Tea">
+                </div>
+                <div class="product-info"><h3>Green Tea</h3><div class="price">--</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer-wave">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,0 C240,60 480,60 720,30 C960,0 1200,0 1440,30 V60 H0 V0 Z" fill="#1A2F1D"></path></svg>
+    </div>
+    <footer class="footer-earth">
+        <div class="footer-grid">
+            <div class="footer-col"><a href="#" class="logo" style="color:#fff; font-size:2rem;">Daalmia.</a></div>
+            <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li></ul></div>
+            <div class="footer-col"><h4>Contact</h4><p>hello@daalmiatea.com</p></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 Daalmia Tea Pvt Ltd.</p></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if(window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+        function toggleMenu() { document.getElementById('navLinks').classList.toggle('mobile-active'); }
+
+        // Gallery Switcher
+        function changeImage(thumb, src) {
+            document.getElementById('mainImg').src = src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+
+        // Quantity Selector
+        function adjustQty(amount) {
+            const input = document.getElementById('qty');
+            let val = parseInt(input.value);
+            val = Math.max(1, val + amount);
+            input.value = val;
+        }
+
+        // Accordion
+        document.querySelectorAll('.acc-header').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const body = btn.nextElementSibling;
+                btn.classList.toggle('active');
+                if(btn.classList.contains('active')) {
+                    body.style.maxHeight = body.scrollHeight + "px";
+                    btn.querySelector('i').classList.remove('fa-plus');
+                    btn.querySelector('i').classList.add('fa-minus');
+                } else {
+                    body.style.maxHeight = 0;
+                    btn.querySelector('i').classList.add('fa-plus');
+                    btn.querySelector('i').classList.remove('fa-minus');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
