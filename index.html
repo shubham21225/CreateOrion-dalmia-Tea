@@ -25,8 +25,10 @@
       </div>
 
 <!-- Premium Navigation -->
- <nav class="navbar" id="navbar">
+    <!-- Premium Navigation -->
+<nav class="navbar" id="navbar">
     <div class="nav-container">
+        
         <!-- Logo -->
         <a href="index.html" class="logo">Daalmia.</a>
 
@@ -36,13 +38,12 @@
             <a href="shop.html" class="nav-item">Shop</a>
             <a href="singleproduct.html" class="nav-item">Single Product</a>
             <a href="contact.html" class="nav-item">Contact</a>
-            <!-- Mobile Only Cart Link -->
-            <a href="checkout.html" class="nav-item mobile-only" style="display:none;">Cart</a> 
+            <a href="cart.html" class="nav-item mobile-only">Cart</a>
         </div>
 
         <!-- Icons & Mobile Toggle -->
-        <div style="display: flex; align-items: center; gap: 20px;">
-            <a href="checkout.html" class="cart-btn">
+        <div class="nav-right">
+            <a href="cart.html" class="cart-btn desktop-only">
                 <i class="fas fa-shopping-bag"></i>
                 <span class="cart-count">0</span>
             </a>
@@ -51,7 +52,17 @@
             </div>
         </div>
     </div>
+
+    <!-- Mobile Menu Slide Panel -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="singleproduct.html">Single Product</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+    </div>
 </nav>
+
 
     <!-- Dynamic Hero Section (Carousel) -->
     <header class="hero">
@@ -401,13 +412,12 @@
 
         
     </script>
-    <script>
-    // Mobile Menu Toggle Script
-    function toggleMenu() {
-        const nav = document.getElementById('navMenu');
-        nav.classList.toggle('active');
-    }
+     <script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+}
 </script>
+
 
 </body>
 </html>
