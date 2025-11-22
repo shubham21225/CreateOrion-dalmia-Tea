@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Daalmia Tea</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation (Same as Index) -->
+      <nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">Daalmia.</a>
+
+        <!-- Desktop Menu -->
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="shop.html" class="nav-item">Shop</a>
+            <a href="#origin" class="nav-item">Our Story</a>
+            <a href="contact.html" class="nav-item">Contact</a>
+            <!-- Mobile Only Cart Link -->
+            <a href="checkout.html" class="nav-item mobile-only" style="display:none;">Cart</a> 
+        </div>
+
+        <!-- Icons & Mobile Toggle -->
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <a href="checkout.html" class="cart-btn">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="breadcrumb"><a href="index.html">Home</a> / Shop</div>
+            <h1>Our Collection</h1>
+            <p>Experience the finest blends from Assam & Dooars.</p>
+        </div>
+    </header>
+
+    <!-- Shop Grid -->
+    <section class="container">
+        <div class="shop-grid">
+            
+            <!-- Product 1 (Main) -->
+            <div class="product-card">
+                <div class="product-thumb">
+                    <span class="badge-new">Best Seller</span>
+                    <a href="product.html">
+                        <img src="https://placehold.co/300x300/transparent/3A5F40?text=Strong+CTC+Pack" alt="Daalmia Strong CTC">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title"><a href="product.html">Daalmia Strong CTC</a></h3>
+                    <p style="color: #888; font-size: 0.9rem;">Strong & Malty</p>
+                    <div class="price" style="font-size: 1.2rem; margin: 10px 0;">₹50.00</div>
+                    <a href="checkout.html" class="btn-primary" style="padding: 8px 20px; font-size: 0.8rem;">Add to Cart</a>
+                </div>
+            </div>
+
+            <!-- Product 2 (Coming Soon) -->
+            <div class="product-card" style="opacity: 0.7;">
+                <div class="product-thumb">
+                    <span class="badge-new" style="background: #ccc;">Coming Soon</span>
+                    <img src="https://placehold.co/300x300/transparent/ccc?text=Masala+Chai" alt="Masala Chai">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Premium Masala Chai</h3>
+                    <p style="color: #888; font-size: 0.9rem;">Spiced Blend</p>
+                    <div class="price" style="font-size: 1.2rem; margin: 10px 0;">--</div>
+                    <button class="btn-secondary" disabled style="padding: 8px 20px; font-size: 0.8rem; cursor: not-allowed;">Out of Stock</button>
+                </div>
+            </div>
+
+             <!-- Product 3 (Coming Soon) -->
+             <div class="product-card" style="opacity: 0.7;">
+                <div class="product-thumb">
+                    <span class="badge-new" style="background: #ccc;">Coming Soon</span>
+                    <img src="https://placehold.co/300x300/transparent/ccc?text=Green+Tea" alt="Green Tea">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Himalayan Green Tea</h3>
+                    <p style="color: #888; font-size: 0.9rem;">Pure Leaves</p>
+                    <div class="price" style="font-size: 1.2rem; margin: 10px 0;">--</div>
+                    <button class="btn-secondary" disabled style="padding: 8px 20px; font-size: 0.8rem; cursor: not-allowed;">Out of Stock</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer (Same as Index) -->
+    <footer class="footer-earth">
+        <div class="container">
+            <p class="copyright">© 2025 Daalmia Tea.</p>
+        </div>
+    </footer>
+
+
+    <script>
+    // Mobile Menu Toggle Script
+    function toggleMenu() {
+        const nav = document.getElementById('navMenu');
+        nav.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

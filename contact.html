@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Daalmia Tea</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">Daalmia.</a>
+
+        <!-- Desktop Menu -->
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="shop.html" class="nav-item">Shop</a>
+            <a href="#origin" class="nav-item">Our Story</a>
+            <a href="contact.html" class="nav-item">Contact</a>
+            <!-- Mobile Only Cart Link -->
+            <a href="checkout.html" class="nav-item mobile-only" style="display:none;">Cart</a> 
+        </div>
+
+        <!-- Icons & Mobile Toggle -->
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <a href="checkout.html" class="cart-btn">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from fellow tea lovers.</p>
+        </div>
+    </header>
+
+    <section class="container" style="max-width: 900px;">
+        <div class="checkout-grid"> <!-- Reusing grid layout -->
+            
+            <!-- Contact Info -->
+            <div>
+                <h3>Head Office</h3>
+                <p style="margin-bottom: 20px;">010/0282, Aliganj, Bhagalpur<br>Bihar 812005, India</p>
+                
+                <h3>Support</h3>
+                <p>Call: 1800-203-5849</p>
+                <p>Email: info@daalmiatea.com</p>
+
+                <div style="margin-top: 30px;">
+                    <h3>License</h3>
+                    <p>FSSAI: 10425120000193</p>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form>
+                <label>Your Name</label>
+                <input type="text" placeholder="Name">
+                <label>Your Email</label>
+                <input type="email" placeholder="Email">
+                <label>Message</label>
+                <textarea rows="5" placeholder="How can we help?"></textarea>
+                <button class="btn-primary">Send Message</button>
+            </form>
+
+        </div>
+    </section>
+
+    <div style="height: 100px;"></div>
+    <footer class="footer-earth">
+        <div class="container"><p class="copyright">© 2025 Daalmia Tea.</p></div>
+    </footer>
+
+
+
+    <script>
+    // Mobile Menu Toggle Script
+    function toggleMenu() {
+        const nav = document.getElementById('navMenu');
+        nav.classList.toggle('active');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Daalmia Tea</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+      <nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">Daalmia.</a>
+
+        <!-- Desktop Menu -->
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="shop.html" class="nav-item">Shop</a>
+            <a href="#origin" class="nav-item">Our Story</a>
+            <a href="contact.html" class="nav-item">Contact</a>
+            <!-- Mobile Only Cart Link -->
+            <a href="checkout.html" class="nav-item mobile-only" style="display:none;">Cart</a> 
+        </div>
+
+        <!-- Icons & Mobile Toggle -->
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <a href="checkout.html" class="cart-btn">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+    <header class="page-header">
+        <div class="container">
+            <h1>Secure Checkout</h1>
+        </div>
+    </header>
+
+    <section class="container">
+
+        <!-- 1. Cart Review -->
+        <h3 style="margin-bottom: 20px;">1. Your Cart</h3>
+
+        <div class="table-wrapper">
+               <table class="woo-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Daalmia Strong CTC Tea (50g)</td>
+                    <td>₹50.00</td>
+                    <td>2</td>
+                    <td><strong>₹100.00</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    
+
+        <!-- 2. Checkout Form -->
+        <h3 style="margin: 40px 0 20px;">2. Billing Details</h3>
+
+        <div class="checkout-grid">
+            <!-- Billing Form -->
+            <form>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <label>First Name *</label>
+                        <input type="text" placeholder="John">
+                    </div>
+                    <div>
+                        <label>Last Name *</label>
+                        <input type="text" placeholder="Doe">
+                    </div>
+                </div>
+
+                <label>Street Address *</label>
+                <input type="text" placeholder="House number and street name">
+
+                <label>Town / City *</label>
+                <input type="text" placeholder="e.g. Bhagalpur">
+
+                <label>Postcode / ZIP *</label>
+                <input type="text">
+
+                <label>Phone *</label>
+                <input type="tel">
+
+                <label>Email Address *</label>
+                <input type="email">
+            </form>
+
+            <!-- Order Summary -->
+            <div class="cart-total-box">
+                <h3 style="margin-bottom: 20px;">Your Order</h3>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span>Subtotal</span>
+                    <span>₹100.00</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span>Shipping</span>
+                    <span>₹40.00</span>
+                </div>
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+                <div
+                    style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 700; color: var(--green-moss); margin-bottom: 20px;">
+                    <span>Total</span>
+                    <span>₹140.00</span>
+                </div>
+
+                <p style="font-size: 0.9rem; margin-bottom: 20px;">
+                    Cash on Delivery (COD) or UPI available.
+                </p>
+
+                <button class="btn-primary btn-wide">Place Order</button>
+            </div>
+        </div>
+
+    </section>
+
+    <div style="height: 100px;"></div>
+    <footer class="footer-earth">
+        <div class="container">
+            <p class="copyright">© 2025 Daalmia Tea.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle Script
+        function toggleMenu() {
+            const nav = document.getElementById('navMenu');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

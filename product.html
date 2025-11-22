@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong CTC Tea | Daalmia Tea</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+      <nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="logo">Daalmia.</a>
+
+        <!-- Desktop Menu -->
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="shop.html" class="nav-item">Shop</a>
+            <a href="#origin" class="nav-item">Our Story</a>
+            <a href="contact.html" class="nav-item">Contact</a>
+            <!-- Mobile Only Cart Link -->
+            <a href="checkout.html" class="nav-item mobile-only" style="display:none;">Cart</a> 
+        </div>
+
+        <!-- Icons & Mobile Toggle -->
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <a href="checkout.html" class="cart-btn">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <div style="height: 100px;"></div> <!-- Spacer for fixed nav -->
+
+    <section class="container single-product-container">
+        <!-- Left: Image -->
+        <div class="sp-gallery">
+            <img src="https://placehold.co/500x600/transparent/3A5F40?text=Daalmia+Tea+Pack" alt="Daalmia Strong CTC" style="max-width: 80%;">
+        </div>
+
+        <!-- Right: Info -->
+        <div class="sp-details">
+            <div class="breadcrumb"><a href="shop.html" style="color:#888;">Shop</a> / CTC Tea</div>
+            <h1>Daalmia Strong CTC Tea</h1>
+            <span class="sp-price">₹50.00</span>
+            <span class="stock-status"><i class="fas fa-check-circle"></i> In Stock</span>
+            
+            <p>A premium blend of Assam & Dooars CTC teas, handpicked from India’s finest tea gardens. Crafted to deliver a bold taste, rich aroma, and authentic strength in every cup.</p>
+            
+            <ul style="margin: 20px 0 30px 20px; color: #555;">
+                <li>Includes 50g of Premium Tea</li>
+                <li>Vacuum Sealed for Freshness</li>
+                <li>100% Natural Ingredients</li>
+            </ul>
+
+            <form action="checkout.html">
+                <div class="qty-box">
+                    <input type="number" class="qty-input" value="1" min="1">
+                    <button type="submit" class="btn-primary btn-wide">Add to Cart</button>
+                </div>
+            </form>
+
+            <div class="sp-meta">
+                Category: <strong>CTC Tea</strong> <br>
+                SKU: <strong>DT-50G-001</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="container">
+        <div class="woo-tabs">
+            <div class="tab-header">
+                <div class="tab-link active">Description</div>
+                <div class="tab-link">Additional Information</div>
+                <div class="tab-link">Reviews (0)</div>
+            </div>
+            <div class="tab-content">
+                <h3>Experience the Strength</h3>
+                <p>At Daalmia, every blend is made with care and precision. We believe every cup should feel refreshing, strong, and truly satisfying. Our leaves are sourced directly from the gardens of Assam and Dooars, ensuring that the transit time between plucking and processing is minimized to retain the 'garden fresh' aroma.</p>
+                <br>
+                <h4>Brewing Instructions:</h4>
+                <p>1. Boil water. 2. Add 1 tsp tea. 3. Add milk/sugar. 4. Simmer for 3 mins.</p>
+            </div>
+        </div>
+    </section>
+    
+    <div style="height: 100px;"></div>
+
+    <footer class="footer-earth">
+        <div class="container">
+            <p class="copyright">© 2025 Daalmia Tea.</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+    // Mobile Menu Toggle Script
+    function toggleMenu() {
+        const nav = document.getElementById('navMenu');
+        nav.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
